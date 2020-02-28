@@ -1,13 +1,13 @@
 version: "3.7"
 services:
   install:
-    image: hub.baidubce.com/docker-pdns/pdns:v1.0.1
+    image: registry.cn-hangzhou.aliyuncs.com/proxyer/proxyer/proxyer:v1.0.1
     command: /bin/sh /opt/bin/install.sh "${PROXYER_PUBLIC_IP}:6789" 
     volumes:
       - /mnt/data/proxyer:/opt/proxyer
     restart: "no"
-  pdns:
-    image: hub.baidubce.com/docker-pdns/pdns:v1.0.1
+  proxyer-server:
+    image: registry.cn-hangzhou.aliyuncs.com/proxyer/proxyer/proxyer:v1.0.1
     command: /opt/bin/pdns -bind="0.0.0.0:6789" -etcd="127.0.0.1:2379"
     network_mode: host
     volumes:
@@ -15,15 +15,15 @@ services:
     depends_on:
       - etcd
     restart: on-failure
-  stp:
-    image: hub.baidubce.com/docker-pdns/pdns:v1.0.1
+  proxyer-turn:
+    image: registry.cn-hangzhou.aliyuncs.com/proxyer/proxyer/proxyer:v1.0.1
     command: /opt/bin/stp -sign="0.0.0.0:6544" -pip="${PROXYER_PUBLIC_IP}" -etcd="127.0.0.1:2379" -pdns="127.0.0.1:6789"
     network_mode: host
     depends_on:
       - etcd
     restart: on-failure
   etcd:
-    image: hub.baidubce.com/docker-pdns/etcd:v3.0
+    image: registry.cn-hangzhou.aliyuncs.com/proxyer/proxyer/etcd:v3.0
     ports:
       - "2379:2379"
     environment:
