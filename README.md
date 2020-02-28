@@ -1,6 +1,7 @@
-# proxyer
 
 ![proxyer](https://github.com/everythingproxyer/proxyer/blob/master/img/logo.png)
+
+# 私有内网映射工具
 
 Proxyer是一个新一代的内网映射工具，借助于公网服务器和内网客户端，可以将内网电脑的任意IP地址和端口映射到公网服务器上。整个过程完全自动化，对内网的依赖极小，只要客户端能够连接外网服务器，就能够实现端口映射。
 
@@ -36,3 +37,9 @@ Proxyer依然有两个重要优势
 
 1. 自己安装自己的服务器，低成本独享服务，不受其它客户影响，安全可靠。
 2. 安装和配置极其简单，开箱即用。
+
+# 其它
+
+- 安装使用可以查看[WIKI](https://github.com/everythingproxyer/proxyer/wiki)
+- 有问题可以在本项目中的[Issues](https://github.com/everythingproxyer/proxyer/issues)提
+- 如果有其它问题，可以发邮件咨询: runimgservices@163.com
