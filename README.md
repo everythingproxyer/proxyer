@@ -25,7 +25,9 @@ Proxyer是一个允许个人随意搭建的新一代的内网映射工具，借�
     1. 企业内部可以自己搭建自己私有的服务器，这样就极其简单的为企业构建了一些场景下的远程办公能力。
     2. 企业某一些特殊产品，需要远程运维，也可以通过搭建自己的私有服务器提供简单高效的解决方案。
     3. 个人可以搭建自己私有的服务端为自己提供优质的内网映射服务。
-2. Proxyer提供极简的安装使用方式。服务端Docker一键安装，客户端开箱即用、完全绿色，支持Windows端、macOS、Linux端
+2. Proxyer提供极简的安装使用方式。
+    1. 服务端Docker一键安装
+    2. 客户端只有一个可执行文件，完全绿色，支持Windows端、macOS、Linux端。（为了保证客户端只有一个可执行文件，同时不生成，不依赖其它文件，我们做了很多独创性设计，欢迎体验）
 3. Proxyer所有的代码和协议都是全新的，不依赖任何开源库，保证了安全和后期功能扩展可持续性。
 
 以花生壳相比，根据官方公布的价格，最便宜的套餐318元/1/年，只有1Mbps的共享带宽，而且只允许一个映射。最贵的企业版本4988元一年，独享5Mbps带宽，映射数量按需开通。
@@ -44,5 +46,5 @@ Proxyer依然有两个重要优势
 # 安装和使用
 
 - 安装使用可以查看[WIKI](https://github.com/everythingproxyer/proxyer/wiki)
-- 有问题可以在本项目中的[Issues](https://github.com/everythingproxyer/proxyer/issues)提
-- 如果有其它问题，可以发邮件咨询: runimgservices@163.com
+- 当然Proxyer还处于初级版本，有问题可以在本项目中的[Issues](https://github.com/everythingproxyer/proxyer/issues)提
+- 如果有其它问题或者大规模应用，可以发邮件咨询: runimgservices@163.com
